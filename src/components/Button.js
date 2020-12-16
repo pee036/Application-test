@@ -1,7 +1,7 @@
 import react from 'react'
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native'
 
-export const buttomMain = ({ title, onPress = () => { }, width = '100%', btnStyle }) => {
+export const ButtomMain = ({ title, onPress = () => { }, width = '100%', btnStyle }) => {
     const btnMainStyle = {
         ...styles.btnMain,
         ...btnStyle
