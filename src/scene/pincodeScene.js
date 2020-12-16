@@ -19,7 +19,7 @@ export class pincodeScene extends Component {
                 <Modal
                     isVisible={modalVisible}
                     useNativeDriver={true}
-                    onBackdropPress={() => this.setState({ modalVisible: !modalVisible })}
+                // onBackdropPress={() => this.setState({ modalVisible: !modalVisible })}
                 >
                     <View style={styles.container_modal}>
                         <Ionicons name={'finger-print'} size={50} color='red' style={{ marginVertical: 10 }} />

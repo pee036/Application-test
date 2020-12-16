@@ -11,7 +11,7 @@ export class setPincodeScene extends Component {
     }
 
     _finishSetPin = async (pincode) => {
-        pincode == 555555 && this.props.navigation.navigate('setTouch')
+        pincode == 999999 && this.props.navigation.navigate('setTouch')
     }
 
     render() {
