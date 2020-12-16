@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, View, TouchableOpacity, StyleSheet, Text, TextInput, TextComponent } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
 
 function loginScene({ navigation }) {
+    const [activeIcon, setactiveIcon] = useState(false)
     return (
         <SafeAreaView style={styles.container}>
             <View style={{ flex: 0.4 }} />
@@ -18,7 +19,12 @@ function loginScene({ navigation }) {
                     placeholder='รหัสผ่าน'
                 />
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ marginTop: 20, color: 'gray' }}>บันทึกการเข้าสู่ระบบ </Text>
+                    <View style={{ flexDirection: 'row', marginTop: 20, alignItems: 'center' }}>
+                        <TouchableOpacity onPress={() => setactiveIcon(!activeIcon)}>
+                            <Feather name={activeIcon ? 'check-square' : 'square'} size={20} color={'gray'} />
+                        </TouchableOpacity>
+                        <Text style={{ marginLeft: 5, color: 'gray' }}>บันทึกการเข้าสู่ระบบ </Text>
+                    </View>
                     <TouchableOpacity style={{}}
                         onPress={() => { navigation.navigate('forgetPass') }}
                     >
