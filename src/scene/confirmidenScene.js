@@ -15,6 +15,8 @@ function confirmiden({ navigation }) {
     const ref_input5 = useRef();
     const ref_input6 = useRef();
 
+    const count_num = 57;
+
     return (
         <SafeAreaView style={styles.container}>
             <KeyboardAvoidingView
@@ -113,9 +115,11 @@ function confirmiden({ navigation }) {
                         />
                     </View>
 
-                    <View style={{ flex: 1, borderWidth: 1, marginTop: 20 }}>
-                        <Text style={{ color: 'gray', alignSelf: 'center', marginTop: 80 }}>หากคุณไม่ได้รับรหัส?</Text>
-                        <Text></Text>
+                    <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginTop: 20 }}>
+                        <Text style={{ color: 'gray', marginTop: 80, marginBottom: 20 }}>หากคุณไม่ได้รับรหัส?</Text>
+                        <TouchableOpacity style={{ flex: 1 }}>
+                            <Text style={{ color: '#2a6450' }}>ส่งรหัสใหม่ ({count_num})</Text>
+                        </TouchableOpacity>
                     </View>
 
                 </View>

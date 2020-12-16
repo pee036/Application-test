@@ -47,7 +47,7 @@ function loginScene({ navigation }) {
                 </View>
 
                 <View style={styles.container_condi2}>
-                    <TouchableOpacity onPress={() => { navigation.navigate('setTouch') }}>
+                    <TouchableOpacity onPress={() => { }} disabled={true}>
                         <Text style={{
                             alignSelf: 'center',
                             color: '#2a6450',
