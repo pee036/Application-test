@@ -1,7 +1,6 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
 import { View, SafeAreaView, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { buttomMain } from '../components/Button'
+import { ButtomMain } from '../components/Button'
 
 function welcomeScene({ navigation }) {
     return (
@@ -9,16 +8,18 @@ function welcomeScene({ navigation }) {
             <View style={{ paddingHorizontal: 30 }}>
                 <Text style={styles.text}>ยินดีต้อนรับ</Text>
                 <Text style={styles.text1}>กรุณาเลือกภาษา</Text>
-                <View style={styles.buttom_eng} >
-                    <Text style={{ alignSelf: 'center', color: 'white', fontSize: 15 }}>English</Text>
-                </View>
-                <TouchableOpacity
-                    style={[styles.buttom_eng, { marginTop: 20 }]}
+                <ButtomMain
+                    title={'English'}
+                    btnStyle={styles.buttom_eng}
+                    textStyle={{ alignSelf: 'center', color: 'white', fontSize: 15 }}
+                    disable={true}
+                />
+                <ButtomMain
+                    title={'ไทย'}
+                    btnStyle={styles.buttom_eng}
+                    textStyle={{ alignSelf: 'center', color: 'white', fontSize: 15 }}
                     onPress={() => navigation.navigate('Condition')}
-                >
-                    <Text style={{ alignSelf: 'center', color: 'white', fontSize: 15 }}>ไทย</Text>
-                </TouchableOpacity>
-                {/* <buttomMain /> */}
+                />
             </View>
         </SafeAreaView>
     )
@@ -44,7 +45,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         height: 40,
         backgroundColor: '#2a6450',
-        borderRadius: 5
+        borderRadius: 5,
+        marginBottom: 20
     }
 })
 

@@ -1,24 +1,20 @@
-import react from 'react'
+import React from 'react'
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native'
 
-export const ButtomMain = ({ title, onPress = () => { }, width = '100%', btnStyle }) => {
-    const btnMainStyle = {
-        ...styles.btnMain,
-        ...btnStyle
-    }
+export const ButtomMain = ({ title, onPress = () => { }, btnStyle, textStyle, disable = false }) => {
 
     return <View>
-        <TouchableOpacity style={[width]} onPress={() => onPress()} style={btnMainStyle}>
-            <Text>{title}</Text>
+        <TouchableOpacity
+            style={btnStyle}
+            onPress={() => onPress()}
+            disabled={disable}
+            activeOpacity={0.8}
+        >
+            <Text style={textStyle}>{title}</Text>
         </TouchableOpacity >
     </View>
 }
 
 const styles = StyleSheet.create({
-    btnMain: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: 10,
-        borderRadius: 20
-    }
+
 })

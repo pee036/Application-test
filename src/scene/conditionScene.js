@@ -2,6 +2,7 @@ import React from 'react'
 import { SafeAreaView, View, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ButtomMain } from '../components/Button'
 
 function conditionScene({ navigation }) {
     return (
