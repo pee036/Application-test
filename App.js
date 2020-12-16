@@ -13,7 +13,7 @@ import otplock from './src/scene/otplockScene';
 import confirmiden from './src/scene/confirmidenScene';
 import setPincodeScene from './src/scene/setPincodeScene';
 import setTouch from './src/scene/setTouch';
-
+import pincodeScene from './src/scene/pincodeScene'
 
 
 
@@ -45,6 +45,8 @@ const App = () => {
         <Stack.Screen name='Setpin' component={setPincodeScene}
           options={{ headerShown: false }} />
         <Stack.Screen name='setTouch' component={setTouch}
+          options={{ headerShown: false }} />
+        <Stack.Screen name='pincode' component={pincodeScene}
           options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
